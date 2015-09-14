@@ -45,5 +45,4 @@ arr.forEach(($el) => {
 		const method = $(this).data('method');
 		window.writeToClipboard(method);
 	});
-
 });
