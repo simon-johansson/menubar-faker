@@ -1,0 +1,65 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+* {
+	outline: none !important;
+}
+
+.container,
+.tab-pane {
+	padding-top: 10px;
+}
+
+.nav-tabs li a {
+	padding: 5px 10px !important;
+}
+
+.category-wrapper span {
+	margin-bottom: 6px;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.category-wrapper .button-wrapper {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.button-wrapper button {
+	margin-bottom: 5px;
+}
+
+.word,
+.sentence,
+.paragraph {
+	background: #474747;
+	cursor: pointer;
+}
+
+.sentence,
+.paragraph {
+	display: block;
+	width: 99%;
+}
+
+.word {
+	display: inline-block;
+	width: 19%;
+	height: 8px;
+}
+
+.sentence {
+	height: 8px;
+	margin-bottom: 5px;
+}
+
+.paragraph {
+	height: 18px;
+	margin-bottom: 5px;
+}

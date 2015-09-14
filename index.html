@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Electron boilerplate</title>
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+		<div class="container">
+			<ul class="nav nav-tabs">
+			  <li role="presentation" class="active"><a href="#person">Person</a></li>
+			  <li role="presentation"><a href="#business">Business</a></li>
+			  <li role="presentation"><a href="#lorem">Lorem</a></li>
+			  <li role="presentation"><a href="#avatars">Avatars</a></li>
+			</ul>
+
+			<div class="tab-content">
+			  <div role="tabpanel" class="tab-pane active" id="person">
+				  <div class="category-wrapper">
+				  	<span>Name:</span>
+				  	<div class="button-wrapper">
+				  	  <button data-method="faker.name.firstName()" type="button" class="btn btn-default btn-xs">First name</button>
+				  	  <button data-method="faker.name.lastName()" type="button" class="btn btn-default btn-xs">Last name</button>
+				  	  <button data-method="faker.name.findName()" type="button" class="btn btn-default btn-xs">Full name</button>
+	 						<!-- <button data-method="faker.prefix" type="button" class="btn btn-default btn-xs">Prefix</button> -->
+	 						<!-- <button data-method="faker.suffix" type="button" class="btn btn-default btn-xs">Suffix</button> -->
+				  	</div>
+				  </div>
+				  <div class="category-wrapper">
+				  	<span><b>Job:</b></span>
+				  	<div class="button-wrapper">
+	 						<button data-method="faker.name.jobTitle()" type="button" class="btn btn-default btn-xs">Job Title</button>
+	 						<button data-method="faker.name.jobDescriptor()" type="button" class="btn btn-default btn-xs">Job Descriptor</button>
+	 						<button data-method="faker.name.jobArea()" type="button" class="btn btn-default btn-xs">Job Area</button>
+	 						<button data-method="faker.name.jobType()" type="button" class="btn btn-default btn-xs">Job Type</button>
+				  	</div>
+				  </div>
+				  <div class="category-wrapper">
+				  	<span><b>Web:</b></span>
+				  	<div class="button-wrapper">
+	 						<button data-method="faker.internet.email()" type="button" class="btn btn-default btn-xs">Email</button>
+	 						<button data-method="faker.internet.userName()" type="button" class="btn btn-default btn-xs">Username</button>
+	 						<button data-method="faker.internet.password()" type="button" class="btn btn-default btn-xs">Password</button>
+	 						<button data-method="faker.internet.userAgent()" type="button" class="btn btn-default btn-xs">Agent</button>
+	 						<button data-method="faker.internet.ip()" type="button" class="btn btn-default btn-xs">IP</button>
+	 						<button data-method="faker.internet.mac()" type="button" class="btn btn-default btn-xs">MAC</button>
+				  	</div>
+				  </div>
+				  <div class="category-wrapper">
+				  	<span><b>Geo:</b></span>
+				  	<div class="button-wrapper">
+	 						<button data-method="faker.address.country()" type="button" class="btn btn-default btn-xs">Country</button>
+	 						<button data-method="faker.address.city()" type="button" class="btn btn-default btn-xs">City</button>
+	 						<button data-method="faker.address.streetAddress()" type="button" class="btn btn-default btn-xs">Street Address</button>
+	 						<button data-method="faker.address.zipCode()" type="button" class="btn btn-default btn-xs">Zip Code</button>
+				  	</div>
+				  </div>
+				  <div class="category-wrapper">
+				  	<span><b>Misc:</b></span>
+				  	<div class="button-wrapper">
+	 						<button data-method="faker.phone.phoneNumber()" type="button" class="btn btn-default btn-xs">Phone</button>
+				  	</div>
+				  </div>
+			  </div>
+			  <div role="tabpanel" class="tab-pane" id="business">
+				  <div class="category-wrapper">
+				  	<span><b>Company:</b></span>
+				  	<div class="button-wrapper">
+	 						<!-- <button data-method="faker.company.suffixes()" type="button" class="btn btn-default btn-xs">suffixes</button> -->
+	 						<button data-method="faker.company.companyName()" type="button" class="btn btn-default btn-xs">Name</button>
+	 						<!-- <button data-method="faker.company.companySuffix()" type="button" class="btn btn-default btn-xs">companySuffix</button> -->
+	 						<button data-method="faker.company.catchPhrase()" type="button" class="btn btn-default btn-xs">Catch Phrase</button>
+	 						<button data-method="faker.company.bs()" type="button" class="btn btn-default btn-xs">BS</button>
+	 						<button data-method="faker.commerce.department()" type="button" class="btn btn-default btn-xs">Department</button>
+	 						<!-- <button data-method="faker.company.catchPhraseAdjective()" type="button" class="btn btn-default btn-xs">catchPhraseAdjective</button> -->
+	 						<!-- <button data-method="faker.company.catchPhraseDescriptor()" type="button" class="btn btn-default btn-xs">catchPhraseDescriptor</button> -->
+	 						<!-- <button data-method="faker.company.catchPhraseNoun()" type="button" class="btn btn-default btn-xs">catchPhraseNoun</button> -->
+	 						<!-- <button data-method="faker.company.bsAdjective()" type="button" class="btn btn-default btn-xs">bsAdjective</button> -->
+	 						<!-- <button data-method="faker.company.bsBuzz()" type="button" class="btn btn-default btn-xs">bsBuzz</button> -->
+	 						<!-- <button data-method="faker.company.bsNoun()" type="button" class="btn btn-default btn-xs">bsNoun</button> -->
+				  	</div>
+				  </div>
+				  <div class="category-wrapper">
+				  	<span><b>Product:</b></span>
+				  	<div class="button-wrapper">
+	 						<button data-method="faker.commerce.productName()" type="button" class="btn btn-default btn-xs">Name</button>
+	 						<button data-method="faker.commerce.product()" type="button" class="btn btn-default btn-xs">Type</button>
+	 						<button data-method="faker.commerce.price()" type="button" class="btn btn-default btn-xs">Price</button>
+	 						<button data-method="faker.commerce.productAdjective()" type="button" class="btn btn-default btn-xs">Adjective</button>
+	 						<button data-method="faker.commerce.productMaterial()" type="button" class="btn btn-default btn-xs">Material</button>
+				  	</div>
+				  </div>
+				  <div class="category-wrapper">
+				  	<span><b>Account:</b></span>
+				  	<div class="button-wrapper">
+	 						<button data-method="faker.finance.accountName()" type="button" class="btn btn-default btn-xs">Name</button>
+	 						<button data-method="faker.finance.account()" type="button" class="btn btn-default btn-xs">Number</button>
+	 						<!-- <button data-method="faker.finance.mask()" type="button" class="btn btn-default btn-xs">mask</button> -->
+	 						<!-- <button data-method="faker.finance.amount()" type="button" class="btn btn-default btn-xs">amount</button> -->
+	 						<!-- <button data-method="faker.finance.transactionType()" type="button" class="btn btn-default btn-xs">transactionType</button> -->
+				  	</div>
+				  </div>
+				  <div class="category-wrapper">
+				  	<span><b>Currency:</b></span>
+				  	<div class="button-wrapper">
+	 						<button data-method="faker.finance.currencyName()" type="button" class="btn btn-default btn-xs">Name</button>
+	 						<button data-method="faker.finance.currencyCode()" type="button" class="btn btn-default btn-xs">Code</button>
+	 						<button data-method="faker.finance.currencySymbol()" type="button" class="btn btn-default btn-xs">Symbol</button>
+				  	</div>
+				  </div>
+				  <div class="category-wrapper">
+				  	<span><b>Hacker:</b></span>
+				  	<div class="button-wrapper">
+	 						<!-- <button data-method="faker.hacker.abbreviation()" type="button" class="btn btn-default btn-xs">abbreviation</button> -->
+	 						<button data-method="faker.hacker.adjective()" type="button" class="btn btn-default btn-xs">Adjective</button>
+	 						<button data-method="faker.hacker.noun()" type="button" class="btn btn-default btn-xs">Noun</button>
+	 						<button data-method="faker.hacker.verb()" type="button" class="btn btn-default btn-xs">Verb</button>
+	 						<!-- <button data-method="faker.hacker.ingverb()" type="button" class="btn btn-default btn-xs">ingverb</button> -->
+	 						<button data-method="faker.hacker.phrase()" type="button" class="btn btn-default btn-xs">Phrase</button>
+				  	</div>
+				  </div>
+			  </div>
+			  <div role="tabpanel" class="tab-pane" id="lorem">
+				  <span>
+				  	<b>
+				  		Copy <span class="amount"></span> <span class="type"></span>
+				  	</b>
+				  </span>
+					<div class="words">
+						<figure data-method="faker.lorem.sentence(1,0)" class="word"></figure>
+						<figure data-method="faker.lorem.sentence(2,0)" class="word"></figure>
+						<figure data-method="faker.lorem.sentence(3,0)" class="word"></figure>
+						<figure data-method="faker.lorem.sentence(4,0)" class="word"></figure>
+						<figure data-method="faker.lorem.sentence(5,0)" class="word"></figure>
+					</div>
+					<div class="sentences">
+						<figure data-method="faker.lorem.sentences(1,0)" class="sentence"></figure>
+						<figure data-method="faker.lorem.sentences(2,0)" class="sentence"></figure>
+						<figure data-method="faker.lorem.sentences(3,0)" class="sentence"></figure>
+						<figure data-method="faker.lorem.sentences(4,0)" class="sentence"></figure>
+					</div>
+					<div class="paragraphs">
+						<figure data-method="faker.lorem.paragraphs(1,0)" class="paragraph"></figure>
+						<figure data-method="faker.lorem.paragraphs(2,0)" class="paragraph"></figure>
+						<figure data-method="faker.lorem.paragraphs(3,0)" class="paragraph"></figure>
+					</div>
+			  </div>
+			  <div role="tabpanel" class="tab-pane" id="avatars">
+			  	<img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
+			  </div>
+			</div>
+		</div>
+		<script src="bundle.js"></script>
+	</body>
+</html>
+
+<!-- address
+zipCode
+cityPrefix
+citySuffix
+streetName
+streetAddress
+streetSuffix
+streetPrefix
+secondaryAddress
+county
+countryCode
+state
+stateAbbr
+latitude
+longitude -->
