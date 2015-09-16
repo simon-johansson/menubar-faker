@@ -1,172 +1,262 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Electron boilerplate</title>
-		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-		<link rel="stylesheet" href="index.css">
-	</head>
-	<body>
-		<div class="container">
-			<ul class="nav nav-tabs">
-			  <li role="presentation" class="active"><a href="#person">Person</a></li>
-			  <li role="presentation"><a href="#business">Business</a></li>
-			  <li role="presentation"><a href="#lorem">Lorem</a></li>
-			  <li role="presentation"><a href="#avatars">Avatars</a></li>
-			</ul>
 
-			<div class="tab-content">
-			  <div role="tabpanel" class="tab-pane active" id="person">
-				  <div class="category-wrapper">
-				  	<span>Name:</span>
-				  	<div class="button-wrapper">
-				  	  <button data-method="faker.name.firstName()" type="button" class="btn btn-default btn-xs">First name</button>
-				  	  <button data-method="faker.name.lastName()" type="button" class="btn btn-default btn-xs">Last name</button>
-				  	  <button data-method="faker.name.findName()" type="button" class="btn btn-default btn-xs">Full name</button>
-	 						<!-- <button data-method="faker.prefix" type="button" class="btn btn-default btn-xs">Prefix</button> -->
-	 						<!-- <button data-method="faker.suffix" type="button" class="btn btn-default btn-xs">Suffix</button> -->
-				  	</div>
-				  </div>
-				  <div class="category-wrapper">
-				  	<span><b>Job:</b></span>
-				  	<div class="button-wrapper">
-	 						<button data-method="faker.name.jobTitle()" type="button" class="btn btn-default btn-xs">Job Title</button>
-	 						<button data-method="faker.name.jobDescriptor()" type="button" class="btn btn-default btn-xs">Job Descriptor</button>
-	 						<button data-method="faker.name.jobArea()" type="button" class="btn btn-default btn-xs">Job Area</button>
-	 						<button data-method="faker.name.jobType()" type="button" class="btn btn-default btn-xs">Job Type</button>
-				  	</div>
-				  </div>
-				  <div class="category-wrapper">
-				  	<span><b>Web:</b></span>
-				  	<div class="button-wrapper">
-	 						<button data-method="faker.internet.email()" type="button" class="btn btn-default btn-xs">Email</button>
-	 						<button data-method="faker.internet.userName()" type="button" class="btn btn-default btn-xs">Username</button>
-	 						<button data-method="faker.internet.password()" type="button" class="btn btn-default btn-xs">Password</button>
-	 						<button data-method="faker.internet.userAgent()" type="button" class="btn btn-default btn-xs">Agent</button>
-	 						<button data-method="faker.internet.ip()" type="button" class="btn btn-default btn-xs">IP</button>
-	 						<button data-method="faker.internet.mac()" type="button" class="btn btn-default btn-xs">MAC</button>
-				  	</div>
-				  </div>
-				  <div class="category-wrapper">
-				  	<span><b>Geo:</b></span>
-				  	<div class="button-wrapper">
-	 						<button data-method="faker.address.country()" type="button" class="btn btn-default btn-xs">Country</button>
-	 						<button data-method="faker.address.city()" type="button" class="btn btn-default btn-xs">City</button>
-	 						<button data-method="faker.address.streetAddress()" type="button" class="btn btn-default btn-xs">Street Address</button>
-	 						<button data-method="faker.address.zipCode()" type="button" class="btn btn-default btn-xs">Zip Code</button>
-				  	</div>
-				  </div>
-				  <div class="category-wrapper">
-				  	<span><b>Misc:</b></span>
-				  	<div class="button-wrapper">
-	 						<button data-method="faker.phone.phoneNumber()" type="button" class="btn btn-default btn-xs">Phone</button>
-				  	</div>
-				  </div>
-			  </div>
-			  <div role="tabpanel" class="tab-pane" id="business">
-				  <div class="category-wrapper">
-				  	<span><b>Company:</b></span>
-				  	<div class="button-wrapper">
-	 						<!-- <button data-method="faker.company.suffixes()" type="button" class="btn btn-default btn-xs">suffixes</button> -->
-	 						<button data-method="faker.company.companyName()" type="button" class="btn btn-default btn-xs">Name</button>
-	 						<!-- <button data-method="faker.company.companySuffix()" type="button" class="btn btn-default btn-xs">companySuffix</button> -->
-	 						<button data-method="faker.company.catchPhrase()" type="button" class="btn btn-default btn-xs">Catch Phrase</button>
-	 						<button data-method="faker.company.bs()" type="button" class="btn btn-default btn-xs">BS</button>
-	 						<button data-method="faker.commerce.department()" type="button" class="btn btn-default btn-xs">Department</button>
-	 						<!-- <button data-method="faker.company.catchPhraseAdjective()" type="button" class="btn btn-default btn-xs">catchPhraseAdjective</button> -->
-	 						<!-- <button data-method="faker.company.catchPhraseDescriptor()" type="button" class="btn btn-default btn-xs">catchPhraseDescriptor</button> -->
-	 						<!-- <button data-method="faker.company.catchPhraseNoun()" type="button" class="btn btn-default btn-xs">catchPhraseNoun</button> -->
-	 						<!-- <button data-method="faker.company.bsAdjective()" type="button" class="btn btn-default btn-xs">bsAdjective</button> -->
-	 						<!-- <button data-method="faker.company.bsBuzz()" type="button" class="btn btn-default btn-xs">bsBuzz</button> -->
-	 						<!-- <button data-method="faker.company.bsNoun()" type="button" class="btn btn-default btn-xs">bsNoun</button> -->
-				  	</div>
-				  </div>
-				  <div class="category-wrapper">
-				  	<span><b>Product:</b></span>
-				  	<div class="button-wrapper">
-	 						<button data-method="faker.commerce.productName()" type="button" class="btn btn-default btn-xs">Name</button>
-	 						<button data-method="faker.commerce.product()" type="button" class="btn btn-default btn-xs">Type</button>
-	 						<button data-method="faker.commerce.price()" type="button" class="btn btn-default btn-xs">Price</button>
-	 						<button data-method="faker.commerce.productAdjective()" type="button" class="btn btn-default btn-xs">Adjective</button>
-	 						<button data-method="faker.commerce.productMaterial()" type="button" class="btn btn-default btn-xs">Material</button>
-				  	</div>
-				  </div>
-				  <div class="category-wrapper">
-				  	<span><b>Account:</b></span>
-				  	<div class="button-wrapper">
-	 						<button data-method="faker.finance.accountName()" type="button" class="btn btn-default btn-xs">Name</button>
-	 						<button data-method="faker.finance.account()" type="button" class="btn btn-default btn-xs">Number</button>
-	 						<!-- <button data-method="faker.finance.mask()" type="button" class="btn btn-default btn-xs">mask</button> -->
-	 						<!-- <button data-method="faker.finance.amount()" type="button" class="btn btn-default btn-xs">amount</button> -->
-	 						<!-- <button data-method="faker.finance.transactionType()" type="button" class="btn btn-default btn-xs">transactionType</button> -->
-				  	</div>
-				  </div>
-				  <div class="category-wrapper">
-				  	<span><b>Currency:</b></span>
-				  	<div class="button-wrapper">
-	 						<button data-method="faker.finance.currencyName()" type="button" class="btn btn-default btn-xs">Name</button>
-	 						<button data-method="faker.finance.currencyCode()" type="button" class="btn btn-default btn-xs">Code</button>
-	 						<button data-method="faker.finance.currencySymbol()" type="button" class="btn btn-default btn-xs">Symbol</button>
-				  	</div>
-				  </div>
-				  <div class="category-wrapper">
-				  	<span><b>Hacker:</b></span>
-				  	<div class="button-wrapper">
-	 						<!-- <button data-method="faker.hacker.abbreviation()" type="button" class="btn btn-default btn-xs">abbreviation</button> -->
-	 						<button data-method="faker.hacker.adjective()" type="button" class="btn btn-default btn-xs">Adjective</button>
-	 						<button data-method="faker.hacker.noun()" type="button" class="btn btn-default btn-xs">Noun</button>
-	 						<button data-method="faker.hacker.verb()" type="button" class="btn btn-default btn-xs">Verb</button>
-	 						<!-- <button data-method="faker.hacker.ingverb()" type="button" class="btn btn-default btn-xs">ingverb</button> -->
-	 						<button data-method="faker.hacker.phrase()" type="button" class="btn btn-default btn-xs">Phrase</button>
-				  	</div>
-				  </div>
-			  </div>
-			  <div role="tabpanel" class="tab-pane" id="lorem">
-				  <span>
-				  	<b>
-				  		Copy <span class="amount"></span> <span class="type"></span>
-				  	</b>
-				  </span>
-					<div class="words">
-						<figure data-method="faker.lorem.sentence(1,0)" class="word"></figure>
-						<figure data-method="faker.lorem.sentence(2,0)" class="word"></figure>
-						<figure data-method="faker.lorem.sentence(3,0)" class="word"></figure>
-						<figure data-method="faker.lorem.sentence(4,0)" class="word"></figure>
-						<figure data-method="faker.lorem.sentence(5,0)" class="word"></figure>
-					</div>
-					<div class="sentences">
-						<figure data-method="faker.lorem.sentences(1,0)" class="sentence"></figure>
-						<figure data-method="faker.lorem.sentences(2,0)" class="sentence"></figure>
-						<figure data-method="faker.lorem.sentences(3,0)" class="sentence"></figure>
-						<figure data-method="faker.lorem.sentences(4,0)" class="sentence"></figure>
-					</div>
-					<div class="paragraphs">
-						<figure data-method="faker.lorem.paragraphs(1,0)" class="paragraph"></figure>
-						<figure data-method="faker.lorem.paragraphs(2,0)" class="paragraph"></figure>
-						<figure data-method="faker.lorem.paragraphs(3,0)" class="paragraph"></figure>
-					</div>
-			  </div>
-			  <div role="tabpanel" class="tab-pane" id="avatars">
-			  	<img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
-			  </div>
-			</div>
-		</div>
-		<script src="bundle.js"></script>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title>Electron boilerplate</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap-select/dist/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="dropdown">
+            <span type="button" data-toggle="dropdown">
+			  	<span class="glyphicon glyphicon-flag"></span>
+            <!-- <span class="caret"></span> -->
+            </span>
+            <ul class="dropdown-menu dropdown-menu-right">
+	            <li data-code="en_AU"><a href="#">Australia (English)</a></li>
+	            <li data-code="en_au_ocker"><a href="#">Australia Ocker (English)</a></li>
+	            <li data-code="en_BORK"><a href="#">Bork (English)</a></li>
+	            <li data-code="en_CA"><a href="#">Canada (English)</a></li>
+	            <li data-code="fr_CA"><a href="#">Canada (French)</a></li>
+	            <li data-code="zh_CN"><a href="#">Chinese</a></li>
+	            <li data-code="zh_TW"><a href="#">Chinese (Taiwan)</a></li>
+	            <li data-code="nl"><a href="#">Dutch</a></li>
+	            <li data-code="en" class="active"><a href="#">English</a></li>
+	            <li data-code="fa"><a href="#">Farsi</a></li>
+	            <li data-code="fr"><a href="#">French</a></li>
+	            <li data-code="ge"><a href="#">Georgian</a></li>
+	            <li data-code="de"><a href="#">German</a></li>
+	            <li data-code="de_AT"><a href="#">German (Austria)</a></li>
+	            <li data-code="de_CH"><a href="#">German (Switzerland)</a></li>
+	            <li data-code="en_GB"><a href="#">Great Britain (English)</a></li>
+	            <li data-code="en_IND"><a href="#">India (English)</a></li>
+	            <li data-code="en_IE"><a href="#">Ireland (English)</a></li>
+	            <li data-code="it"><a href="#">Italian</a></li>
+	            <li data-code="ja"><a href="#">Japanese</a></li>
+	            <li data-code="ko"><a href="#">Korean</a></li>
+	            <li data-code="nep"><a href="#">Nepalese</a></li>
+	            <li data-code="nb_NO"><a href="#">Norwegian</a></li>
+	            <li data-code="pl"><a href="#">Polish</a></li>
+	            <li data-code="pt_BR"><a href="#">Portuguese (Brazil)</a></li>
+	            <li data-code="ru"><a href="#">Russian</a></li>
+	            <li data-code="sk"><a href="#">Slovakian</a></li>
+	            <li data-code="es"><a href="#">Spanish</a></li>
+	            <li data-code="sv"><a href="#">Swedish</a></li>
+	            <li data-code="tr"><a href="#">Turkish</a></li>
+	            <li data-code="uk"><a href="#">Ukrainian</a></li>
+	            <li data-code="en_US"><a href="#">United States (English)</a></li>
+	            <li data-code="vi"><a href="#">Vietnamese</a></li>
+            </ul>
+        </div>
+        <ul class="nav nav-tabs">
+            <!-- <li class="dropdown">
+		      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		      <span class="glyphicon glyphicon-flag"></span></a>
+		      <ul class="dropdown-menu">
+		        <li><a href="#">Submenu 1-1</a></li>
+		        <li><a href="#">Submenu 1-2</a></li>
+		        <li><a href="#">Submenu 1-3</a></li>
+		      </ul>
+		    </li> -->
+            <li class="active"><a href="#person">Person</a></li>
+            <li><a href="#business">Business</a></li>
+            <li><a href="#lorem">Lorem</a></li>
+            <li><a href="#avatars">Avatars</a></li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="person">
+                <div class="category-wrapper">
+                    <span>Name:</span>
+                    <div class="button-wrapper">
+                        <button data-method="faker.name.firstName()" type="button" class="btn btn-default btn-xs">First name</button>
+                        <button data-method="faker.name.lastName()" type="button" class="btn btn-default btn-xs">Last name</button>
+                        <button data-method="faker.name.findName()" type="button" class="btn btn-default btn-xs">Full name</button>
+                        <!-- <button data-method="faker.prefix" type="button" class="btn btn-default btn-xs">Prefix</button> -->
+                        <!-- <button data-method="faker.suffix" type="button" class="btn btn-default btn-xs">Suffix</button> -->
+                    </div>
+                </div>
+                <div class="category-wrapper">
+                    <span><b>Job:</b></span>
+                    <div class="button-wrapper">
+                        <button data-method="faker.name.jobTitle()" type="button" class="btn btn-default btn-xs">Job Title</button>
+                        <button data-method="faker.name.jobDescriptor()" type="button" class="btn btn-default btn-xs">Job Descriptor</button>
+                        <button data-method="faker.name.jobArea()" type="button" class="btn btn-default btn-xs">Job Area</button>
+                        <button data-method="faker.name.jobType()" type="button" class="btn btn-default btn-xs">Job Type</button>
+                    </div>
+                </div>
+                <div class="category-wrapper">
+                    <span><b>Web:</b></span>
+                    <div class="button-wrapper">
+                        <button data-method="faker.internet.email()" type="button" class="btn btn-default btn-xs">Email</button>
+                        <button data-method="faker.internet.userName()" type="button" class="btn btn-default btn-xs">Username</button>
+                        <button data-method="faker.internet.password()" type="button" class="btn btn-default btn-xs">Password</button>
+                        <button data-method="faker.internet.userAgent()" type="button" class="btn btn-default btn-xs">Agent</button>
+                        <button data-method="faker.internet.ip()" type="button" class="btn btn-default btn-xs">IP</button>
+                        <button data-method="faker.internet.mac()" type="button" class="btn btn-default btn-xs">MAC</button>
+                    </div>
+                </div>
+                <div class="category-wrapper">
+                    <span><b>Geo:</b></span>
+                    <div class="button-wrapper">
+                        <button data-method="faker.address.country()" type="button" class="btn btn-default btn-xs">Country</button>
+                        <button data-method="faker.address.city()" type="button" class="btn btn-default btn-xs">City</button>
+                        <button data-method="faker.address.streetAddress()" type="button" class="btn btn-default btn-xs">Street Address</button>
+                        <button data-method="faker.address.zipCode()" type="button" class="btn btn-default btn-xs">Zip Code</button>
+                    </div>
+                </div>
+                <div class="category-wrapper">
+                    <span><b>Date:</b></span>
+                    <div class="button-wrapper">
+                        <button data-method="faker.date.past()" type="button" class="btn btn-default btn-xs">Past</button>
+                        <button data-method="faker.date.future(2)" type="button" class="btn btn-default btn-xs">Future</button>
+                        <!-- <button data-method="faker.date.between()" type="button" class="btn btn-default btn-xs">between</button> -->
+                        <button data-method="faker.date.recent(2)" type="button" class="btn btn-default btn-xs">Recent</button>
+                        <button data-method="faker.date.month()" type="button" class="btn btn-default btn-xs">Month</button>
+                        <button data-method="faker.date.weekday()" type="button" class="btn btn-default btn-xs">Weekday</button>
+                    </div>
+                </div>
+                <div class="category-wrapper">
+                    <span><b>Misc:</b></span>
+                    <div class="button-wrapper">
+                        <button data-method="faker.phone.phoneNumber()" type="button" class="btn btn-default btn-xs">Phone</button>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="business">
+                <div class="category-wrapper">
+                    <span><b>Company:</b></span>
+                    <div class="button-wrapper">
+                        <!-- <button data-method="faker.company.suffixes()" type="button" class="btn btn-default btn-xs">suffixes</button> -->
+                        <button data-method="faker.company.companyName()" type="button" class="btn btn-default btn-xs">Name</button>
+                        <!-- <button data-method="faker.company.companySuffix()" type="button" class="btn btn-default btn-xs">companySuffix</button> -->
+                        <button data-method="faker.company.catchPhrase()" type="button" class="btn btn-default btn-xs">Catch Phrase</button>
+                        <button data-method="faker.company.bs()" type="button" class="btn btn-default btn-xs">BS</button>
+                        <button data-method="faker.commerce.department()" type="button" class="btn btn-default btn-xs">Department</button>
+                        <!-- <button data-method="faker.company.catchPhraseAdjective()" type="button" class="btn btn-default btn-xs">catchPhraseAdjective</button> -->
+                        <!-- <button data-method="faker.company.catchPhraseDescriptor()" type="button" class="btn btn-default btn-xs">catchPhraseDescriptor</button> -->
+                        <!-- <button data-method="faker.company.catchPhraseNoun()" type="button" class="btn btn-default btn-xs">catchPhraseNoun</button> -->
+                        <!-- <button data-method="faker.company.bsAdjective()" type="button" class="btn btn-default btn-xs">bsAdjective</button> -->
+                        <!-- <button data-method="faker.company.bsBuzz()" type="button" class="btn btn-default btn-xs">bsBuzz</button> -->
+                        <!-- <button data-method="faker.company.bsNoun()" type="button" class="btn btn-default btn-xs">bsNoun</button> -->
+                    </div>
+                </div>
+                <div class="category-wrapper">
+                    <span><b>Product:</b></span>
+                    <div class="button-wrapper">
+                        <button data-method="faker.commerce.productName()" type="button" class="btn btn-default btn-xs">Name</button>
+                        <button data-method="faker.commerce.product()" type="button" class="btn btn-default btn-xs">Type</button>
+                        <button data-method="faker.commerce.price()" type="button" class="btn btn-default btn-xs">Price</button>
+                        <button data-method="faker.commerce.productAdjective()" type="button" class="btn btn-default btn-xs">Adjective</button>
+                        <button data-method="faker.commerce.productMaterial()" type="button" class="btn btn-default btn-xs">Material</button>
+                    </div>
+                </div>
+                <div class="category-wrapper">
+                    <span><b>Account:</b></span>
+                    <div class="button-wrapper">
+                        <button data-method="faker.finance.accountName()" type="button" class="btn btn-default btn-xs">Name</button>
+                        <button data-method="faker.finance.account()" type="button" class="btn btn-default btn-xs">Number</button>
+                        <!-- <button data-method="faker.finance.mask()" type="button" class="btn btn-default btn-xs">mask</button> -->
+                        <!-- <button data-method="faker.finance.amount()" type="button" class="btn btn-default btn-xs">amount</button> -->
+                        <!-- <button data-method="faker.finance.transactionType()" type="button" class="btn btn-default btn-xs">transactionType</button> -->
+                    </div>
+                </div>
+                <div class="category-wrapper">
+                    <span><b>Currency:</b></span>
+                    <div class="button-wrapper">
+                        <button data-method="faker.finance.currencyName()" type="button" class="btn btn-default btn-xs">Name</button>
+                        <button data-method="faker.finance.currencyCode()" type="button" class="btn btn-default btn-xs">Code</button>
+                        <button data-method="faker.finance.currencySymbol()" type="button" class="btn btn-default btn-xs">Symbol</button>
+                    </div>
+                </div>
+                <div class="category-wrapper">
+                    <span><b>Hacker:</b></span>
+                    <div class="button-wrapper">
+                        <!-- <button data-method="faker.hacker.abbreviation()" type="button" class="btn btn-default btn-xs">abbreviation</button> -->
+                        <button data-method="faker.hacker.adjective()" type="button" class="btn btn-default btn-xs">Adjective</button>
+                        <button data-method="faker.hacker.noun()" type="button" class="btn btn-default btn-xs">Noun</button>
+                        <button data-method="faker.hacker.verb()" type="button" class="btn btn-default btn-xs">Verb</button>
+                        <!-- <button data-method="faker.hacker.ingverb()" type="button" class="btn btn-default btn-xs">ingverb</button> -->
+                        <button data-method="faker.hacker.phrase()" type="button" class="btn btn-default btn-xs">Phrase</button>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="lorem">
+                <span><b>Copy <span class="amount"></span> <span class="type"></b></span>
+                </span>
+                <div class="words">
+                    <figure data-method="faker.lorem.sentence(1,0)" class="word"></figure>
+                    <figure data-method="faker.lorem.sentence(2,0)" class="word"></figure>
+                    <figure data-method="faker.lorem.sentence(3,0)" class="word"></figure>
+                    <figure data-method="faker.lorem.sentence(4,0)" class="word"></figure>
+                    <figure data-method="faker.lorem.sentence(5,0)" class="word"></figure>
+                </div>
+                <div class="sentences">
+                    <figure data-method="sentences(1,0)" class="sentence"></figure>
+                    <figure data-method="sentences(2,0)" class="sentence"></figure>
+                    <figure data-method="sentences(3,0)" class="sentence"></figure>
+                    <figure data-method="sentences(4,0)" class="sentence"></figure>
+                </div>
+                <div class="paragraphs">
+                    <figure data-method="paragraphs(1,0)" class="paragraph"></figure>
+                    <figure data-method="paragraphs(2,0)" class="paragraph"></figure>
+                    <figure data-method="paragraphs(3,0)" class="paragraph"></figure>
+                    <figure data-method="paragraphs(4,0)" class="paragraph"></figure>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="avatars">
+                <div class="load-new">
+                    <span>Load new</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/template" id="avatar-template">
+        <div class="img-wrapper">
+            <img src="{0}" alt="">
+        </div>
+    </script>
+    <script src="bundle.js"></script>
+</body>
+
 </html>
-
-<!-- address
-zipCode
-cityPrefix
-citySuffix
-streetName
-streetAddress
-streetSuffix
-streetPrefix
-secondaryAddress
-county
-countryCode
-state
-stateAbbr
-latitude
-longitude -->
+<!--
+<select class="form-control locale">
+    <option value="en_AU">Australia (English)</option>
+    <option value="en_au_ocker">Australia Ocker (English)</option>
+    <option value="en_BORK">Bork (English)</option>
+    <option value="en_CA">Canada (English)</option>
+    <option value="fr_CA">Canada (French)</option>
+    <option value="zh_CN">Chinese</option>
+    <option value="zh_TW">Chinese (Taiwan)</option>
+    <option value="nl">Dutch</option>
+    <option value="en">English</option>
+    <option value="fa">Farsi</option>
+    <option value="fr">French</option>
+    <option value="ge">Georgian</option>
+    <option value="de">German</option>
+    <option value="de_AT">German (Austria)</option>
+    <option value="de_CH">German (Switzerland)</option>
+    <option value="en_GB">Great Britain (English)</option>
+    <option value="en_IND">India (English)</option>
+    <option value="en_IE">Ireland (English)</option>
+    <option value="it">Italian</option>
+    <option value="ja">Japanese</option>
+    <option value="ko">Korean</option>
+    <option value="nep">Nepalese</option>
+    <option value="nb_NO">Norwegian</option>
+    <option value="pl">Polish</option>
+    <option value="pt_BR">Portuguese (Brazil)</option>
+    <option value="ru">Russian</option>
+    <option value="sk">Slovakian</option>
+    <option value="es">Spanish</option>
+    <option value="sv">Swedish</option>
+    <option value="tr">Turkish</option>
+    <option value="uk">Ukrainian</option>
+    <option value="en_US">United States (English)</option>
+    <option value="vi">Vietnamese</option>
+</select>
+ -->

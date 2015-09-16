@@ -15,10 +15,11 @@
   },
   "scripts": {
     "test": "xo",
-    "start": "babel electron.js --out-file index.js && electron .",
     "dev": "browserify app.js -t babelify --outfile bundle.js",
-    "watch": "watchify app.js --watch -t babelify --outfile bundle.js",
-    "build": "electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --all --version=0.31.1"
+    "watch-client": "watchify app.js --watch -t babelify --outfile bundle.js",
+    "compile-server": "babel electron.js --out-file index.js",
+    "start": "npm run watch-client && npm run compile-server & electron .",
+    "build": "npm run dev && npm run compile-server && electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --all --version=0.31.1"
   },
   "files": [
     "index.js",
@@ -31,6 +32,7 @@
   "dependencies": {
     "applescript": "^1.0.0",
     "bootstrap": "^3.3.5",
+    "bootstrap-select": "^1.7.3",
     "electron-debug": "^0.1.1",
     "faker": "^3.0.1",
     "jquery": "^2.1.4",
