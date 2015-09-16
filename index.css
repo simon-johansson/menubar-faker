@@ -23,6 +23,7 @@ body {
 .nav-tabs {
 	width: 280px;
 	display: inline-block;
+	margin-left: 38px;
 }
 
 .nav-tabs li a {
@@ -128,3 +129,9 @@ body {
 	text-align: center;
 }
 
+.glyphicon-remove {
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	cursor: pointer;
+}

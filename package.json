@@ -2,37 +2,38 @@
   "name": "menubar-faker",
   "productName": "MenubarFaker",
   "version": "0.0.0",
-  "description": "My divine app",
+  "description": "OSX app for quickly generating fake data. Nice to have when creating wireframes or mock-ups for UI design.",
   "license": "MIT",
   "repository": "simon-johansson/menubar-faker",
   "author": {
     "name": "Simon Johansson",
     "email": "",
-    "url": "example.com"
+    "url": "https://github.com/simon-johansson/menubar-faker"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
     "test": "xo",
-    "dev": "browserify app.js -t babelify --outfile bundle.js",
-    "watch-client": "watchify app.js --watch -t babelify --outfile bundle.js",
-    "compile-server": "babel electron.js --out-file index.js",
-    "start": "npm run watch-client && npm run compile-server & electron .",
-    "build": "npm run dev && npm run compile-server && electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --all --version=0.31.1"
+    "compile-client": "browserify client/index.js -t babelify --outfile build/bundle.js",
+    "watch-client": "npm run compile-client && watchify client/index.js --watch -t babelify --outfile build/bundle.js",
+    "compile-server": "babel index.js --out-file build/index.js",
+    "compile-all": "npm run compile-client && npm run compile-server",
+    "start": "npm run compile-all && electron .",
+    "build": "npm run compile-all && electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --platform darwin --arch x64 --version=0.31.1"
   },
   "files": [
     "index.js",
     "index.html",
     "index.css"
   ],
+  "main": "build/index.js",
   "keywords": [
     "electron-app"
   ],
   "dependencies": {
     "applescript": "^1.0.0",
     "bootstrap": "^3.3.5",
-    "bootstrap-select": "^1.7.3",
     "electron-debug": "^0.1.1",
     "faker": "^3.0.1",
     "jquery": "^2.1.4",

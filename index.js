@@ -7,11 +7,12 @@ const NativeImage = require('native-image');
 const menubar = require('menubar');
 const applescript = require('applescript');
 const faker = require('faker');
-const dataURL = require('./js/dataURL');
+// path relative to build folder
+const {dataURL} = require('../utils');
 
 var latestCall = null;
 var mb = menubar({
-  // "always-on-top": true,
+  "always-on-top": true,
   "height": 250,
   "width": 390,
 });
@@ -52,6 +53,11 @@ ipc.on('new-clipboard', function(event, arg) {
 
 ipc.on('set-locale', function(event, arg) {
 	faker.locale = arg;
+});
+
+ipc.on('close', function(event, arg) {
+	console.log('close');
+	app.quit();
 });
 
 function fetchImage(url) {

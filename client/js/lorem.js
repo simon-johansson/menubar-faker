@@ -1,5 +1,6 @@
 
 import $ from 'jquery';
+import {writeToClipboard} from './ipc'
 
 const $tab = $('#lorem');
 const $word = $tab.find('.word');
@@ -43,6 +44,6 @@ arr.forEach(($el) => {
 	$el.on('click', function (e) {
 		e.preventDefault();
 		const method = $(this).data('method');
-		window.writeToClipboard(method);
+		writeToClipboard(method);
 	});
 });
