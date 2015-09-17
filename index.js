@@ -12,7 +12,7 @@ const {dataURL} = require('../utils');
 
 var latestCall = null;
 var mb = menubar({
-  "always-on-top": true,
+  // "always-on-top": true,
   "height": 250,
   "width": 390,
 });
